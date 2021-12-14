@@ -37,7 +37,17 @@ module.exports.handleEvent = async ({ event, api, Currencies,Users, args, utils,
         return api.sendMessage(msg,event.threadID,event.messageID);}
     if (event.body.toLowerCase() == "lô"){
         return api.sendMessage(msg,event.threadID,event.messageID);}
-        };
+    if (event.body.toLowerCase() == "chào ae"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "xin chào"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "hii"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "hai"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+    if (event.body.toLowerCase() == "à nhon xê ô"){
+        return api.sendMessage(msg,event.threadID,event.messageID);}
+            };
 module.exports.run = async ({ event, api, Currencies, args, utils }) => {
 return api.sendMessage("Dùng sai cách rồi lêu lêu",event.threadID)
     }
