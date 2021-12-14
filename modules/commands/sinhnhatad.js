@@ -15,5 +15,5 @@ module.exports.run = function ({ event, api }) {
     const hours = Math.floor( (t/(1000*60*60)) % 24 );
     const days = Math.floor( t/(1000*60*60*24) );
 
-    return api.sendMessage(`「Sắp tới ngày sinh nhật của cậu chủ Trần Nguyễn Gia Huy rồi đóooo <3」\n» ${days} ngày ${hours} tiếng ${minutes} phút ${seconds} giây «`, event.threadID, event.messageID);
+    return api.sendMessage(`「Đếm ngược sinh nhật của cậu chủ Trần Nguyễn Gia Huy <3」\n» ${days} ngày ${hours} tiếng ${minutes} phút ${seconds} giây «`, event.threadID, event.messageID);
 }
