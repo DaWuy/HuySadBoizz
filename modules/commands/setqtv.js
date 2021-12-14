@@ -1,18 +1,18 @@
 module.exports.config = {
-	name: "setadmin",
+	name: "setqtv",
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "loi",
 	description: "chỉ định qtv-bot phải làm qtv",
 	commandCategory: "other",
-	usages: "set",
+	usages: "setqtv",
 	cooldowns: 5,
 	info: [
 		{
 			key: "tag",
 			prompt: "Để trống hoặc tag người khác",
 			type: 'Tag',
-			example: 'setptv-by loi'
+			example: 'setqtv-by loi'
 		}
 	]
 };

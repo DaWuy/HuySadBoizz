@@ -1,5 +1,5 @@
 module.exports.config = {
- name: "setall",
+ name: "setnameall",
  version: "1.0.0",
  hasPermssion: 2,
  credits: "Khánh Milo",
