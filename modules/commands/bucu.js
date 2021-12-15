@@ -2,7 +2,7 @@ const request = require("request");
 const fs = require("fs")
 const axios = require("axios")
 module.exports.config = {
-  name: "búcu",
+  name: "bucu",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "huy hoàng và hoàng",
@@ -13,7 +13,7 @@ module.exports.config = {
   dependencies: {
         "fs": "",
         "axios": "",
-		"request": ""
+    "request": ""
     }
 };
 
