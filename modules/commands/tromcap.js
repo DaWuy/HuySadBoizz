@@ -1,21 +1,21 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "fai fai",
-    version: "1.0.0",
+	name: "tromcap",
+    version: "1.0.1",
 	hasPermssion: 0,
-	credits: "TuanLinh", 
+	credits: "DW", 
 	description: "no prefix",
 	commandCategory: "Không cần dấu lệnh",
-	usages: "Fai Fai",
+	usages: "tromcap",
     cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Fai Fai")==0 || (event.body.indexOf("Fai fai")==0 || (event.body.indexOf("fai fai")==0 || (event.body.indexOf("Faifai")==0)))) {
+	if (event.body.indexOf("Trộm")==0 || (event.body.indexOf("trộm")==0 || (event.body.index0f("scam")==0 || (event.body.index0f("Scam")==0)))) {
 		var msg = {
-				body: "Hí ae :))",
-				attachment: fs.createReadStream(__dirname + `/noprefix/faifai.mp4`)
+				body: "nhạc đây nè !!",
+				attachment: fs.createReadStream(__dirname + `/noprefix/tromcap.mp4`)
 			}
 			api.sendMessage(msg, threadID, messageID);
 		}
