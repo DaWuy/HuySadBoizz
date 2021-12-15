@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   const time = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss L");
   var idgr = `${event.threadID}`;
 
-  var tl = ["chào bạn tôi là bot của Trần Nguyễn Gia Huy", "bạn kêu tôi có việc gì?", "tôi yêu bạn vai lon", "Yêu em <3", "Hi, chào con vợ bé:3", "Vợ gọi có việc gì không?", "Sử dụng callad để liên lạc với admin!", "Em là bot cute nhất hành tinh", "Nói gì thế con lợn", "Em đây~~~~", "Yêu anh Huy nhất", "chị ấy là bae của DAWUY", "Yêu thương admin nhất", "Anh ấy là phụ trợ của admin", "Sao thế công chúa", "Đừng làm em đau ~~~~", "Rên với em nhé a á á á", "Tuyển phi công nè ạ", "Làm đĩ ko ạ? dui lắm", "Cậu cô đơn ko?", "Chịch ko ạ vã quá!!!", "Được của ló :)))", "Em dthw như chủ của em ạ", "Đừng khen em ngại quá hí hí" ,"Làm chồng em ko ạ?", "Đừng spam em nha :<<, cậu chủ em mệt lắm ời", "Cút ra", "Đừng đè em mạnh!!!", "Đút tutu thôi em đau :'(", "Yêu cậu như một cực hình\nNhấp lên nhấp xuống hai mình cùng rên", "Spam cc cút", "Yêu em ko?", "Chồng em đây rồi","Donate thì bank qua MBBank: 0100718928888 - Trần nguyễn Gia Huy","Kêu chi lắm thế? Bộ thích tao rồi à :v", "Chần chờ gì chồng ơi em đâyyy", "Chần chờ gì vợ ơi anh đâyyy", "Em... Sao em lại nói những cái lời đó chi zay em?", "Thầy dạy phờ ri màaa", "Yeu em rat nhieu ^^", "Đồ con lợn lùn :))", "Đợi xí. Đi ẻ cái :()", "500k bao phòng!!!", "Yeu anh den luy ^^", "Nên nhớ đừng bao giờ cướp chồng của admin :))", "Anh quát em à?\nNói to thế á?", "Trả quần cho em huhu", "Baby, take my hand. I want you to be my husband. Cause you're my Iron Man. And I love you 3000 <3", "Tao cười tao đi toilet=))", "Đây là trang web thông tin của admin, có gì liên hệ qua Fb này: https://www.facebook.com/WuyChjll", "Đừng quá yêu một ai đó, khi chính bản thân bạn vẫn bị tổn thương!", "Bae, em nhu bong hoa. Nhung nguoi hai dau phai ta 💔", "Nuôi cậu để thịt ~~", "Overnight không?", "Hãy gọi cho admin tôi để được yêu thương<3", "Hát đi cho kẹo 🍭","Tao đây nè con đỗn lì","Chưa follow mà đòi xin in tư à, Bot hong cho đâuuuuu","Gọi lắm zay cdl","Gọi tao có gì không hả con gái mẹ mày"," Gọi con cặc","Em ơi lâu đài tình ái đó chắc đ có trên trần gian :3"];
+  var tl = ["chào bạn tôi là bot của Trần Nguyễn Gia Huy", "bạn kêu tôi có việc gì?", "tôi yêu bạn vai lon", "Yêu em <3", "Hi, chào con vợ bé:3", "Vợ gọi có việc gì không?", "Sử dụng callad để liên lạc với admin!", "Em là bot cute nhất hành tinh", "Nói gì thế con lợn", "Em đây~~~~", "Yêu anh Huy nhất", "chị ấy là bae của DAWUY", "Yêu thương admin nhất", "Anh ấy là phụ trợ của admin", "Sao thế công chúa", "Đừng làm em đau ~~~~", "Rên với em nhé a á á á", "Tuyển phi công nè ạ", "Làm đĩ ko ạ? dui lắm", "Cậu cô đơn ko?", "Chịch ko ạ vã quá!!!", "Được của ló :)))", "Em dthw như chủ của em ạ", "Đừng khen em ngại quá hí hí" ,"Làm chồng em ko ạ?", "Đừng spam em nha :<<, cậu chủ em mệt lắm ời", "Cút ra", "Đừng đè em mạnh!!!", "Đút tutu thôi em đau :'(", "Yêu cậu như một cực hình\nNhấp lên nhấp xuống hai mình cùng rên", "Spam cc cút", "Yêu em ko?", "Chồng em đây rồi","Donate thì bank qua MBBank: 0100718928888 - Trần nguyễn Gia Huy","Kêu chi lắm thế? Bộ thích tao rồi à :v", "Chần chờ gì chồng ơi em đâyyy", "Chần chờ gì vợ ơi anh đâyyy", "Em... Sao em lại nói những cái lời đó chi zay em?", "Thầy dạy phờ ri màaa", "Yeu em rat nhieu ^^", "Đồ con lợn lùn :))", "Đợi xí. Đi ẻ cái :()", "500k bao phòng!!!", "Yeu anh den luy ^^", "Nên nhớ đừng bao giờ cướp chồng của admin :))", "Anh quát em à?\nNói to thế á?", "Trả quần cho em huhu", "Baby, take my hand. I want you to be my husband. Cause you're my Iron Man. And I love you 3000 <3", "Tao cười tao đi toilet=))", "Đây là trang web thông tin của admin, có gì liên hệ qua Fb này: https://www.facebook.com/WuyChjll", "Đừng quá yêu một ai đó, khi chính bản thân bạn vẫn bị tổn thương!", "Bae, em nhu bong hoa. Nhung nguoi hai dau phai ta 💔", "Nuôi cậu để thịt ~~", "Overnight không?", "Hãy gọi cho admin tôi để được yêu thương<3", "Hát đi cho kẹo 🍭","Tao đây nè con đỗn lì","Chưa follow mà đòi xin in tư à, Bot hong cho đâuuuuu","Gọi lắm zay cdl","Gọi tao có gì không hả con gái mẹ mày"," Gọi con cặc","Em ơi lâu đài tình ái đó chắc đ có trên trần gian :3","Tôi là bot đẹp trai hơn nhân cách của bạn","Đã không thích người ta thì đừng có thích người ta :)))","Thôi mày câm mẹ mồm đi","Tao xiên chết đỉ mẹ mày giờ","Bot 30cm 30phut xin nghe :3"];
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
   if ((event.body.toLowerCase() == "bot ngu")) {
@@ -122,6 +122,26 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
     return api.sendMessage("Thành viên đã cố ý chửi bot, do đó đã vi phạm luật bot nên bot sẽ out và muốn add lại thì xin liên hệ qua admin qua Fb: DAWUY để được hỗ trợ\nLink fb nè: https://www.facebook.com/WuyChjll", threadID, () =>
       api.removeUserFromGroup(api.getCurrentUserID(), threadID));
   };
+
+  if ((event.body.toLowerCase() == "bot như cặc")) {
+    return api.sendMessage("Thành viên đã cố ý chửi bot, do đó đã vi phạm luật bot nên bot sẽ out và muốn add lại thì xin liên hệ qua admin qua Fb: DAWUY để được hỗ trợ\nLink fb nè: https://www.facebook.com/WuyChjll", threadID, () =>
+      api.removeUserFromGroup(api.getCurrentUserID(), threadID));
+  };
+
+  if ((event.body.toLowerCase() == "bot như lồn")) {
+    return api.sendMessage("Thành viên đã cố ý chửi bot, do đó đã vi phạm luật bot nên bot sẽ out và muốn add lại thì xin liên hệ qua admin qua Fb: DAWUY để được hỗ trợ\nLink fb nè: https://www.facebook.com/WuyChjll", threadID, () =>
+      api.removeUserFromGroup(api.getCurrentUserID(), threadID));
+  };
+
+  if ((event.body.toLowerCase() == "bot nhu cac")) {
+    return api.sendMessage("Thành viên đã cố ý chửi bot, do đó đã vi phạm luật bot nên bot sẽ out và muốn add lại thì xin liên hệ qua admin qua Fb: DAWUY để được hỗ trợ\nLink fb nè: https://www.facebook.com/WuyChjll", threadID, () =>
+      api.removeUserFromGroup(api.getCurrentUserID(), threadID));
+  };
+
+  if ((event.body.toLowerCase() == "bot nhu lon")) {
+    return api.sendMessage("Thành viên đã cố ý chửi bot, do đó đã vi phạm luật bot nên bot sẽ out và muốn add lại thì xin liên hệ qua admin qua Fb: DAWUY để được hỗ trợ\nLink fb nè: https://www.facebook.com/WuyChjll", threadID, () =>
+      api.removeUserFromGroup(api.getCurrentUserID(), threadID));
+  };
   
   if ((event.body.toLowerCase() == "huy ngu")) {
     return api.sendMessage("Thành viên đã cố ý chửi admin, và địt mẹ mày luôn dám chửi admin à con chó rách :Đ", threadID, () =>
@@ -199,7 +219,7 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   };
 
   if ((event.body.toLowerCase() == "đmm bot") || (event.body.toLowerCase() == "dmm bot")) {
-    return api.sendMessage("Bất hiếu cha sinh mẹ đẻ mà mày nói thế là hỏng người rồi", threadID);
+    return api.sendMessage("chửi tao à con đỉ mẹ mày", threadID);
   };
 
   if ((event.body.toLowerCase() == "chửi cmm") || (event.body.toLowerCase() == "chui cmm")) {
@@ -207,7 +227,7 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   };
 
   if ((event.body.toLowerCase() == "cmm bot") || (event.body.toLowerCase() == "cmm bot")) {
-    return api.sendMessage("Chửi cc gì thích đấm nhau ko mà sồn sồn lên thế :)", threadID);
+    return api.sendMessage("chửi tao thì cả nhà mày ăn lồn nhau nhé ", threadID);
   };
 
   if ((event.body.toLowerCase() == "địt") || (event.body.toLowerCase() == "dit")) {
@@ -222,11 +242,11 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
     return api.sendMessage("Anh ấy tuy ko đẹp trai hay giỏi gì nhưng được cái hài hước và luôn mong đạt được mục tiêu anh ấy muốn <3 <3 ", threadID);
   };
 
-  if ((event.body.toLowerCase() == "a huy") || (event.body.toLowerCase() == "a huy")) {
+  if ((event.body.toLowerCase() == "a Huy") || (event.body.toLowerCase() == "a huy")) {
     return api.sendMessage("Anh ấy tuy ko đẹp trai hay giỏi gì nhưng được cái hài hước và luôn mong đạt được mục tiêu anh ấy muốn <3 <3 ", threadID);
   };
 
-  if ((event.body.toLowerCase() == "huy") || (event.body.toLowerCase() == "huy")) {
+  if ((event.body.toLowerCase() == "huy") || (event.body.toLowerCase() == "Huy")) {
     return api.sendMessage("Anh ấy tuy ko đẹp trai hay giỏi gì nhưng được cái hài hước và luôn mong đạt được mục tiêu anh ấy muốn <3 <3 ", threadID);
   };
 
@@ -343,22 +363,22 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   };
 
   if ((event.body.toLowerCase() == "clmm bot") || (event.body.toLowerCase() == "clmm bot")) {
-    return api.sendMessage("️Chửi gì đấy con dog :) bố mmày nhịn mày lâu lắm rồi đấy nhá", threadID);
+    return api.sendMessage("️Chửi gì đấy con dog :) chủi tao thì mày ăn cặc Trần Đức Bo", threadID);
   };
 
   if ((event.body.toLowerCase() == "bot cc") || (event.body.toLowerCase() == "bot cc")) {
-    return api.sendMessage("️Chửi gì đấy con dog :) bố mmày nhịn mày lâu lắm rồi đấy nhá", threadID);
+    return api.sendMessage("️Chửi gì đấy con dog :) tao còn thông minh hơn mày", threadID);
   };
 
   if ((event.body.toLowerCase() == "cc bot") || (event.body.toLowerCase() == "cc bot")) {
-    return api.sendMessage("️Chửi gì đấy con dog :) bố mmày nhịn mày lâu lắm rồi đấy nhá", threadID);
+    return api.sendMessage("️Chửi gì đấy con dog :) rác bố không chấp", threadID);
   };
 
   if ((event.body.toLowerCase() == "cặc") || (event.body.toLowerCase() == "cặc")) {
     return api.sendMessage("️Văn minh chút đi bạn ơi lớn rồi đừng để ăn chửi :)", threadID);
   };
 
-  if ((event.body.toLowerCase() == "ông Huy") || (event.body.toLowerCase() == "ong Huy")) {
+  if ((event.body.toLowerCase() == "ông huy") || (event.body.toLowerCase() == "ong huy")) {
     return api.sendMessage("️Kêu chủ của tôi gì á :)?", threadID);
   };
 
@@ -371,11 +391,11 @@ module.exports.handleEvent = function({ api, event, args, Threads }) {
   };
 
   if ((event.body.toLowerCase() == "haha") || (event.body.toLowerCase() == "haha")) {
-    return api.sendMessage("️Haha dui quá ha :>> cười cặc :)", threadID);
+    return api.sendMessage("️Haha dui quá ha :>> đéo có gì buồn cười:)", threadID);
   };
 
   if ((event.body.toLowerCase() == "kkk") || (event.body.toLowerCase() == "kkk")) {
-    return api.sendMessage("️Haha dui quá ha :>> cười cặc :)", threadID);
+    return api.sendMessage("️Haha dui quá ha :>> đéo có gì mắc cười :)", threadID);
   };
 
   if ((event.body.toLowerCase() == "con cặc") || (event.body.toLowerCase() == "con cặc")) {

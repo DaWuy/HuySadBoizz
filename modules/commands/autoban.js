@@ -59,7 +59,7 @@
   body: `»Thông báo từ Admin«\n\n${c}, Con chos rách vừa chửi bot đã bị ban bay màu khỏi hệ thống !`
   };
   //Thêm các câu chửi vào ko viết Hoa
-  ["botngu", "bot ngu", "bot gà", "con bot lol", "bot ngu lol", "bot chó", "dm bot", "đm bot", "mày ngu lắm bot", "dmm bot", "đmm bot", "đb bot", "bot điên", "bot dở", "bot khùng", "đĩ bot", "bot paylac rồi", "con bot lòn", "cmm bot", "clap bot", "bot ncc", "bot oc", "bot óc", "bot óc chó", "cc bot", "bot tiki", "lozz bottt", "lol bot", "loz bot", "lồn bot", "bot lồn", "bot lon", "bot cac", "bot nhu lon", "bot như cc", "bot như bìu", "Bot sida", "bot sida", "bot fake", "huy ngu", "bot shoppee", "bot đểu", "bot dỡm","huy lồn","chó bot","huy occho","bot câm","bot dỏm","bot dom","chó huy","bot rác","vãi lồn bot","vl bot","địt mẹ mày bot","bot lazada"].forEach((a => {
+  ["botngu", "bot ngu", "bot gà", "con bot lol", "bot ngu lol", "bot chó", "dm bot", "đm bot", "mày ngu lắm bot", "dmm bot", "đmm bot", "đb bot", "bot điên", "bot dở", "bot khùng", "đĩ bot", "bot paylac rồi", "con bot lòn", "cmm bot", "clap bot", "bot ncc", "bot oc", "bot óc", "bot óc chó", "cc bot", "bot tiki", "lozz bottt", "lol bot", "loz bot", "lồn bot", "bot lồn", "bot lon", "bot cac", "bot nhu lon", "bot như cc", "bot như bìu", "Bot sida", "bot sida", "bot fake", "huy ngu", "bot shoppee", "bot đểu", "bot dỡm","huy lồn","chó bot","huy occho","bot câm","bot dỏm","bot dom","chó huy","bot rác","vãi lồn bot","vl bot","địt mẹ mày bot","bot lazada", "bot như cặc","bot như lồn","bot này gà","bot cùi thế","bot ăn lồn"].forEach((a => {
   
   const s = o.senderID;
   let d = a[0].toUpperCase() + a.slice(1);
