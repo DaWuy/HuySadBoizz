@@ -1,6 +1,6 @@
 const fs = require("fs");
 module.exports.config = {
-	name: "3107",
+	name: "31071",
     version: "1.0.1",
 	hasPermssion: 0,
 	credits: "MinhQuang - Fixed by LTD", 
@@ -12,9 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("3107")==0 || (event.body.indexOf("3107")==0)) {
+	if (event.body.indexOf("31071")==0 || (event.body.indexOf("31071")==0)) {
 		var msg = {
-				body: "nhạc đây nè !!",
+				body: "phần 1",
 				attachment: fs.createReadStream(__dirname + `/noprefix/3107.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);
