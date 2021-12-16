@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "bác hồ",
+	name: "bacho",
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "CatalizCS",
