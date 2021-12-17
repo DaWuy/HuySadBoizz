@@ -1,8 +1,8 @@
 module.exports.config = {
-    name: "slap2",
+    name: "doggy",
     version: "2.0.0",
     hasPermssion: 0,
-    credits: "ProCoderMew",
+    credits: "DinhPhuc",
     description: "",
     commandCategory: "general",
     usages: "[tag]",
@@ -20,33 +20,34 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'slap.png');
+    const path = resolve(__dirname, 'cache/canvas', 'doggy.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://raw.githubusercontent.com/ProCoderMew/Module-Miraiv2/main/data/slap.png", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/mguIr9x.png", path);
 }
-async function makeImage({ one, two }) {    
+
+async function makeImage({ one, two }) {
     const fs = global.nodemodule["fs-extra"];
     const path = global.nodemodule["path"];
-    const axios = global.nodemodule["axios"];
+    const axios = global.nodemodule["axios"]; 
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let slap_image = await jimp.read(__root + "/slap.png");
-    let pathImg = __root + `/slap_${one}_${two}.png`;
+    let doggy_img = await jimp.read(__root + "/doggy.png");
+    let pathImg = __root + `/doggy_${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
     
-    let getAvatarOne = (await axios.get(`https://api.miraiproject.tk/getavatar?ID=${one}`, { responseType: 'arraybuffer' })).data;
+    let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
     fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
     
-    let getAvatarTwo = (await axios.get(`https://api.miraiproject.tk/getavatar?ID=${two}`, { responseType: 'arraybuffer' })).data;
+    let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
     fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    slap_image.composite(circleOne.resize(150, 150), 745, 25).composite(circleTwo.resize(140, 140), 180, 40);
+    doggy_img.resize(500, 500).composite(circleOne.resize(70, 70), 217, 152).composite(circleTwo.resize(80, 80), 106, 269);
     
-    let raw = await slap_image.getBufferAsync("image/png");
+    let raw = await doggy_img.getBufferAsync("image/png");
     
     fs.writeFileSync(pathImg, raw);
     fs.unlinkSync(avatarOne);
@@ -64,10 +65,16 @@ async function circle(image) {
 module.exports.run = async function ({ event, api, args }) {
     const fs = global.nodemodule["fs-extra"];
     const { threadID, messageID, senderID } = event;
-    const mention = Object.keys(event.mentions);
+     var mention = Object.keys(event.mentions)[0]
+    let tag = event.mentions[mention].replace("@", "");
     if (!mention) return api.sendMessage("Vui lòng tag 1 người", threadID, messageID);
     else {
-        var one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "Toang ALO nè", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        var one = senderID, two = mention;
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "Ơ kìa Em " + tag + '',
+            mentions: [{
+          tag: tag,
+          id: mention
+        }],
+     attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
 }

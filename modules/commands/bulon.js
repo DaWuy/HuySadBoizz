@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "huy hoàng và hoàng",
   description: "Bú Lồn Người Bạn Muốn",
   commandCategory: "Hình Ảnh",
-  usages: "bulon",
+  usages: "@tag",
   cooldowns: 5,
   dependencies: {
         "fs": "",
