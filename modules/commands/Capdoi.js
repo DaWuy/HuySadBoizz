@@ -7,11 +7,15 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "huy hoàng và hoàng ",
   description: "Ảnh Gái Xinh",
-  commandCategory: "Hình Ảnh",
+  commandCategory: "random-img",
   usages: "capdoi",
   cooldowns: 5,
-  dependencies: ["request","fs","axios"]
-   };
+  dependencies: {
+          "request": "",
+              "fs": "",
+             "axios": "",
+}
+};
 
 module.exports.run = async({api,event,args,client,Users,Threads,__GLOBAL,Currencies}) => {
  var link = [
