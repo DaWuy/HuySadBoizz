@@ -15,7 +15,7 @@ module.exports.languages = {
         "overTagLength": "[ PAY ] Vui lòng chỉ tag một người duy nhất",
         "userNotExist": "[ PAY ] Người dùng bạn cần chuyển không tồn tại trong hệ thống!",
         "invalidInput": "[ PAY ] Số tiền bạn nhập không phù hợp để chuyển",
-        "payerNotExist": "[ PAY ] Hiện tại bạn không tồn tại trong hệ thống, vui lòng chờ 5 giây sau đó thử lại",
+        "payerNotExist": "[ PAY ] Hiện tại bạn không tồn tại trong hệ thống hoặc không đủ số dư để thực hiện, vui lòng chờ 5 giây sau đó thử lại",
         "notEnoughMoney": "[ PAY ] Bạn không đủ tiền để thực hiện giao dịch!",
         "paySuccess": "[ PAY ] Đã chuyển thành công %1$ (15% tax) cho người dùng: %2",
         "error": "[ PAY ] Đã xảy ra lỗi không mong muốn trong lúc thực hiện giao dịch"
