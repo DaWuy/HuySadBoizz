@@ -34,6 +34,10 @@
 - ![image](https://user-images.githubusercontent.com/95005376/145699259-29bff163-6c20-420e-b58f-8fdd427cf85e.png)
 - 🍁 **Xóa từ dấu phẩy nhé !**
 
+- 🍁 **Nếu npm i hiện ra một dòng err thì nhập npm i chalk@4.1.2 nhé**
+
+
+
 
 
 
