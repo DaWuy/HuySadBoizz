@@ -4487,9 +4487,9 @@ module.exports.run = async({api, event, Currencies}) => {
     Currencies.setData(event.senderID, options = {money: money - 200})
    var callback = () => 
    api.sendMessage({
-    body:`200 Đã Bay Khỏi Túi Của Mày\nẢnh Gái Xinh\nSố Ảnh: ${link.length}`,
+    body:`200 Đã Bay Khỏi Túi Của Mày\nẢnh Gái Xinh\nSố Ảnh: ${link.length}\nGỡ sau 60s :)))`,
     attachment: fs.createReadStream(__dirname + "/cache/gaixinh.jpg")
   }, event.threadID, (err, info) =>
-        setTimeout(() => {api.unsendMessage(info.messageID) } , 10000));
+        setTimeout(() => {api.unsendMessage(info.messageID) } , 60000));
        request(link[Math.floor(Math.random() * link.length)]).pipe(fs.createWriteStream(__dirname+"/cache/gaixinh.jpg")).on("close",() => callback());
    };

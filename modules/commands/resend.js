@@ -41,7 +41,7 @@ module.exports.handleEvent = async function({
                 t += 1;
                 var h = (await n.get(f.url)).uri.pathname,
                     b = h.substring(h.lastIndexOf(".") + 1),
-                    p = __dirname + `/cache/${t}.${b}`,
+                    p = __dirname + `/resend/${t}.${b}`,
                     y = (await o.get(f.url, {
                         responseType: "arraybuffer"
                     })).data;
